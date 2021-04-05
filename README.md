@@ -6,6 +6,11 @@
 ip a
 ```
 
-## crontab
+## 设置定时执行
 
-ip addr show $1 | grep inet6 | grep mngtmpaddr | awk '{ print $2; }' | sed 's/\/.*$//'
+```bash
+crontab -e
+```
+
+添加
+`*/10 * * * * /home/sj/ipv6-ddns/ipv6-ddns.sh enp2s0`
