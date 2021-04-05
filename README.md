@@ -12,5 +12,5 @@ ip a
 crontab -e
 ```
 
-添加
-`*/10 * * * * /home/sj/ipv6-ddns/ipv6-ddns.sh enp2s0`
+每隔10分钟执行1次
+`*/10 * * * * /home/sj/ipv6-ddns/ipv6-ddns.sh [NetworkCardName] [SubdomainName] [DomainName]`
