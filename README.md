@@ -13,4 +13,6 @@ crontab -e
 ```
 
 每隔10分钟执行1次
-`*/10 * * * * /usr/bin/python3 ~/ipv6-ddns/alidns-ddns6.py [域名] [主机记录]`
+```bash
+*/10 * * * * /usr/bin/python3 ~/ipv6-ddns/alidns-ddns6.py [域名] [主机记录]
+```
