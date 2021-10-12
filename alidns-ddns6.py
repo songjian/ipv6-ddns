@@ -11,13 +11,20 @@ import sys
 import json
 import os
 
+from dotenv import load_dotenv
+from os import environ
 #print(sys.argv)
+
+load_dotenv(verbose=True)
 
 tmp = os.popen("ip addr show enp2s0 | grep inet6 | grep mngtmpaddr | awk '{ print $2; }' | sed 's/\/.*$//'").readlines()
 inet6_addr = tmp[0].strip('\n')
 #print(inet6_addr)
 
-client = AcsClient('LTAI4G46AuNBx4X44ohS2wCR', 'Fz0jobmwGq9j1536oVPsgslg7JIKSR', 'cn-hangzhou')
+ACCESS_KEY_ID = environ.get('ACCESS_KEY_ID')
+ACCESS_KEY_SECRET = environ.get('ACCESS_KEY_SECRET')
+
+client = AcsClient(ACCESS_KEY_ID, ACCESS_KEY_SECRET, 'cn-hangzhou')
 request = DescribeDomainRecordsRequest()
 request.set_accept_format('json')
 request.set_DomainName(sys.argv[1])
