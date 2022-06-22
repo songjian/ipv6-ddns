@@ -16,3 +16,7 @@ crontab -e
 ```bash
 */10 * * * * /usr/bin/python3 ~/ipv6-ddns/alidns-ddns6.py [域名] [主机记录]
 ```
+
+## 文档
+
+* [阿里云 云解析 DNS](https://pypi.org/project/aliyun-python-sdk-alidns/)

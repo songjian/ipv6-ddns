@@ -1,0 +1,7 @@
+alidns:
+  key: LTAI5tQpeonF4Qe4nhoQG7MT
+  secret: EjOlO8udkFkPwtycJbV1uqUfMvQIAd
+  domains:
+    - DomainName: codeorder.cn
+      RR: 
+        - www
